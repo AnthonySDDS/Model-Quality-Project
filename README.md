@@ -1,29 +1,27 @@
-# Model-Quality-Project
-Will be using multiple models to improve quality
-
 Overview
+This project aims to predict customer churn using a machine learning approach. After evaluating multiple models and techniques, an optimized Random Forest Classifier was selected for its balanced performance and ability to reduce misclassification errors.
 
-This project focuses on building and optimizing a Random Forest model to predict customer churn. The dataset includes customer attributes such as credit score, geography, gender, account balance, and activity levels to determine whether a customer is likely to leave. The goal is to maximize the model's ability to identify churners while maintaining high accuracy.
+Dataset
+The dataset used for training and evaluation includes customer information and churn labels. It was preprocessed to handle missing values, encode categorical variables, and scale numerical features. To address class imbalance, SMOTE (Synthetic Minority Over-sampling Technique) was applied.
 
-Techniques Used
+Model: Optimized Random Forest
+Key Highlights:
+Precision: 61%
 
-SMOTE (Synthetic Minority Over-Sampling Technique): Balances the dataset by generating synthetic churner cases.
+Recall: 60%
 
-Class Weighting: Adjusts the model to give more importance to churn cases.
+F1-Score: 61%
 
-Hyperparameter Tuning: Optimizes model parameters using RandomizedSearchCV to improve performance.
+Evaluation: Macro-averaged
 
-Feature Scaling: Standardizes numerical features to improve model stability.
+Improvements:
+Initially, the model struggled with high false positives and missed churn cases.
 
-Final Model Performance
+SMOTE was used to balance the dataset and give more weight to minority (churn) cases.
 
-Accuracy: 79.55%
+Hyperparameter tuning (e.g., n_estimators, max_depth, min_samples_split) significantly improved model performance.
 
-Precision for Churners: 49.82%
+Post-optimization, the model became more selective, improving precision while maintaining strong recall.
 
-Recall for Churners: 68.06%
-
-F1-Score for Churners: 57.5%
-
-How to Run the Model (Everything to see model is at link):
-https://github.com/AnthonySDDS/Model-Quality-Project
+Conclusion
+The final Random Forest model provides a reliable and balanced method for predicting customer churn. It effectively reduces false predictions and captures a meaningful portion of churners, making it suitable for business applications like customer retention strategies and proactive engagement.
